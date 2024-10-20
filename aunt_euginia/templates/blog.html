@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Blog{% endblock %}
+
+{% block content %}
+<div class="blog-page">
+    <!-- Image on the left side -->
+    <div class="left-image-container">
+        <img src="https://i.ibb.co/RTVqPjH/Screenshot-2024-10-18-at-11-59-33-PM.png" alt="Blog Sidebar Image" class="left-image">
+    </div>
+
+    <!-- Main Blog Content -->
+    <div class="blog-content">
+        <h1>Blog</h1>
+        <p>Explore our latest posts on socio-political issues, faith, and the world we live in.</p>
+
+        <div class="blog-posts">
+            <article>
+                <h2><a href="#">Can Christians Support Social Movements?</a></h2>
+                <p>An analysis of major social movements and their alignment with biblical values.</p>
+            </article>
+            <article>
+                <h2><a href="#">Christianity in a Secular Society</a></h2>
+                <p>Standing firm in your beliefs in a world increasingly distant from faith.</p>
+            </article>
+            <article>
+                <h2><a href="#">Government Policies and the Christian Community</a></h2>
+                <p>Exploring recent policy changes and their impact on religious freedom.</p>
+            </article>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}Aunty Eugenia{% endblock %}
+
+{% block content %}
+<div class="homepage-container">
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <h1>Welcome to Aunty Eugenia</h1>
+        <p>Your daily guide to navigating faith, politics, and society. Explore insightful articles, thoughtful reflections, and engaging discussions about socio-political issues through the lens of Christian faith.</p>
+        <a href="{{ url_for('blog') }}" class="cta-btn">Explore Blog</a>
+
+        <!-- Featured Posts Section -->
+        <section id="featured-posts" class="floating-section">
+            <h2>Featured Posts</h2>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <h3><a href="#">The Role of Faith in Modern Politics</a></h3>
+                    <p>How can Christians influence the political landscape without compromising their beliefs?</p>
+                    <a href="#" class="read-more-btn">Read More</a>
+                </div>
+                <div class="grid-item">
+                    <h3><a href="#">Balancing Social Justice and Faith</a></h3>
+                    <p>Understanding social justice from a biblical perspective in today's complex world.</p>
+                    <a href="#" class="read-more-btn">Read More</a>
+                </div>
+                <div class="grid-item">
+                    <h3><a href="#">Faith in the Midst of Crisis</a></h3>
+                    <p>What does it mean to trust God in uncertain times? Lessons from the pandemic.</p>
+                    <a href="#" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Sidebar with Floating Border -->
+    <aside class="right-sidebar">
+        <div class="sidebar-image" style="background-image: url('https://i.ibb.co/Tw7HDd8/Screenshot-2024-10-18-at-11-58-08-PM.png');"></div>
+    </aside>
+</div>
+{% endblock %}

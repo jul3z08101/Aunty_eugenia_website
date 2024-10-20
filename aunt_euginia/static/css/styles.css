@@ -1,0 +1,445 @@
+/* Base Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d5e3e1; /* Main background color */
+    position: relative;
+}
+
+/* Transparent Overlay for the Background */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(213, 227, 225, 0.6); /* Transparent overlay */
+    z-index: -1; /* Places it behind the content */
+}
+
+/* Centered Navigation Styling */
+header {
+    background-color: rgba(90, 176, 165, 0.8); /* Slightly transparent */
+    padding: 1rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center; /* Centers the navigation */
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-btn {
+    text-decoration: none;
+    color: white;
+    background-color: #5ab0a5;
+    padding: 0.75rem 2rem;
+    border-radius: 25px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.nav-btn:hover {
+    background-color: #47988b;
+    transform: translateY(-3px); /* Slight lift on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Homepage Container Layout */
+.homepage-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+/* Main Content Styling */
+.main-content {
+    flex: 3;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-content h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.main-content p {
+    font-size: 1.25rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* Call-to-Action Button */
+.cta-btn {
+    background-color: #5ab0a5;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cta-btn:hover {
+    background-color: #47988b;
+    transform: translateY(-3px); /* Slight lift on hover */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Floating Section for Featured Posts */
+.floating-section {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent */
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.grid-item {
+    background-color: rgba(249, 249, 249, 0.9); /* Slightly transparent */
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item h3 a {
+    text-decoration: none;
+    color: #333;
+}
+
+.grid-item h3 a:hover {
+    color: #5ab0a5;
+}
+
+.read-more-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: #5ab0a5;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.read-more-btn:hover {
+    background-color: #47988b;
+    transform: translateY(-3px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Sticky Sidebar Styling */
+.right-sidebar {
+    flex: 1;
+    width: 25%;
+    height: 80vh;
+    position: -webkit-sticky; /* For Safari */
+    position: sticky; /* For modern browsers */
+    top: 20px; /* Distance from the top of the page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(213, 227, 225, 0.4);
+    border: 5px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #5ab0a5;
+    color: white;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+footer .social-media {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+footer .social-icon {
+    color: white;
+    font-size: 2rem;
+    transition: color 0.3s, transform 0.3s;
+}
+
+footer .social-icon:hover {
+    color: #d5e3e1; /* Match the main background color */
+    transform: scale(1.2);
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .nav-btn {
+        width: 80%;
+        text-align: center;
+    }
+
+    .homepage-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .right-sidebar {
+        margin: 2rem 0;
+        width: 100%;
+        height: 300px;
+        position: static; /* Disable sticky behavior for small screens */
+    }
+
+    .floating-section {
+        margin-top: 1rem;
+    }
+}
+
+/* About Page Layout */
+.about-page {
+    display: flex;
+    padding: 2rem;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+/* Side Image Container */
+.side-image-container {
+    flex: 1;
+    max-width: 300px;
+}
+
+.side-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* About Page Layout */
+.about-page {
+    display: flex;
+    padding: 2rem;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+/* Side Image Container */
+.side-image-container {
+    flex: 1;
+    max-width: 300px;
+}
+
+.side-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* About Content Styling */
+.about-content {
+    flex: 3;
+    max-width: 800px;
+}
+
+.about-content h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.about-content p {
+    font-size: 1.25rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.about-content ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+}
+
+.about-content ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive Design for About Page */
+@media (max-width: 768px) {
+    .about-page {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .side-image-container {
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .about-content {
+        padding: 1rem;
+    }
+}
+
+
+
+/* Blog Page Layout */
+.blog-page {
+    display: flex;
+    padding: 2rem;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+/* Left Image Container */
+.left-image-container {
+    flex: 0 0 45%; /* Takes up 45% of the page */
+}
+
+.left-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Blog Content Styling */
+.blog-content {
+    flex: 0 0 55%; /* Takes up the remaining 55% of the page */
+    max-width: 800px;
+}
+
+.blog-content h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.blog-content p {
+    font-size: 1.25rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.blog-posts article {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-posts article h2 {
+    font-size: 1.75rem;
+    color: #5ab0a5;
+    margin-bottom: 0.5rem;
+}
+
+.blog-posts article p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Responsive Design for Blog Page */
+@media (max-width: 768px) {
+    .blog-page {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-image-container {
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .blog-content {
+        padding: 1rem;
+        max-width: 100%;
+    }
+}
+
+/* Shop Page Layout */
+.shop-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+/* Shop Heading Styling */
+.shop-heading {
+    text-align: center;
+}
+
+.shop-heading h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.shop-heading p {
+    font-size: 1.25rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+/* Centered Image Container */
+.centered-image-container {
+    width: 80%; /* Takes up most of the page width */
+    display: flex;
+    justify-content: center;
+}
+
+.centered-image {
+    width: 80%;
+    height: auto;
+    border-radius: 15px; /* Soft rounded corners */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Floating shadow effect */
+    margin-bottom: 2rem;
+}
+
+/* Responsive Design for Shop Page */
+@media (max-width: 568px) {
+    .centered-image-container {
+        width: 80%;
+    }
+
+    .shop-heading {
+        padding: 1rem;
+    }
+}
